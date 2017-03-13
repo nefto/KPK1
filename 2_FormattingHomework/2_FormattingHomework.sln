@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_FormattingHomework", "2_FormattingHomework\2_FormattingHomework.csproj", "{8E3A16BD-E726-4EB8-B3E8-F4A2FA3B4A6B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bunnies", "Bunnies\Bunnies.csproj", "{716A7B83-D7D5-48BF-A336-35AC1A2526C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events", "Events\Events.csproj", "{9FC85D84-F425-484A-9D0D-C36F43722B1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8E3A16BD-E726-4EB8-B3E8-F4A2FA3B4A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E3A16BD-E726-4EB8-B3E8-F4A2FA3B4A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E3A16BD-E726-4EB8-B3E8-F4A2FA3B4A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E3A16BD-E726-4EB8-B3E8-F4A2FA3B4A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{716A7B83-D7D5-48BF-A336-35AC1A2526C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{716A7B83-D7D5-48BF-A336-35AC1A2526C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{716A7B83-D7D5-48BF-A336-35AC1A2526C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{716A7B83-D7D5-48BF-A336-35AC1A2526C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FC85D84-F425-484A-9D0D-C36F43722B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FC85D84-F425-484A-9D0D-C36F43722B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FC85D84-F425-484A-9D0D-C36F43722B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FC85D84-F425-484A-9D0D-C36F43722B1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

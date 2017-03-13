@@ -1,5 +1,4 @@
-﻿
-namespace High.Quality.Code.BadExample
+﻿namespace High.Quality.Code.BadExample
 {
     using System;
     using System.Collections.Generic;
@@ -10,52 +9,37 @@ namespace High.Quality.Code.BadExample
     using System.Text;
     using System.Threading.Tasks;
 
+    public enum FurType
+    {
+        NotFluffy, ALittleFluffy, Fluffy, FluffyToTheLimit
+    }
+
     public class Bunnies
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var bunnies = new List<Bunny>
             {
-                new Bunny { Name = "Leonid", Age= 1, FurType = FurType.NotFluffy },
-                new Bunny { Name = "Rasputin", Age= 2, FurType = FurType.ALittleFluffy },
-                new Bunny { Name = "Tiberii", Age= 3, FurType = FurType.ALittleFluffy, },
-                new Bunny { Name = "Neron", Age= 1, FurType = FurType.ALittleFluffy },
-                new Bunny
-                { Name = "Klavdii" , Age= 3, FurType = FurType.Fluffy },
-                new Bunny
-                { Name = "Vespasian" , Age= 3, FurType = FurType.Fluffy },
-                new Bunny {Name = "Domician" ,
-
-
-
-
-                    Age = 4, FurType = FurType.FluffyToTheLimit },
-                new Bunny {Name = "Tit" , Age= 2,
-
-
-                    FurType = FurType.FluffyToTheLimit }
+                new Bunny { Name = "Leonid", Age = 1, FurType = FurType.NotFluffy },
+                new Bunny { Name = "Rasputin", Age = 2, FurType = FurType.ALittleFluffy },
+                new Bunny { Name = "Tiberii", Age = 3, FurType = FurType.ALittleFluffy, },
+                new Bunny { Name = "Neron", Age = 1, FurType = FurType.ALittleFluffy },
+                new Bunny { Name = "Klavdii", Age = 3, FurType = FurType.Fluffy },
+                new Bunny { Name = "Vespasian", Age = 3, FurType = FurType.Fluffy },
+                new Bunny { Name = "Domician", Age = 4, FurType = FurType.FluffyToTheLimit },
+                new Bunny { Name = "Tit", Age = 2, FurType = FurType.FluffyToTheLimit }
             };
+            var consoleWriter = new ConsoleWriter();
 
+            foreach (var bunny in bunnies)
+            {
+                bunny.Introduce(consoleWriter);
+            }
 
-            var
-consoleWriter =
-                // Introduce all bunnies
-                new ConsoleWriter();
-            foreach (
-                            var bunny
+            var bunniesFilePath = @"..\..\bunnies.txt";
+            var fileStream = File.Create(bunniesFilePath);
+            fileStream.Close();
 
-                                    in
-
-                            bunnies) { bunny.Introduce(consoleWriter); }
-            var  // Create bunnies text file
-bunniesFilePath
-=
-@"..\..\bunnies.txt"; var
-fileStream
-=
-File.Create(bunniesFilePath); fileStream.Close();
-
-            // Save bunnies to a text file
             using (var streamWriter = new StreamWriter(bunniesFilePath))
             {
                 foreach (var bunny in bunnies)
@@ -66,19 +50,21 @@ File.Create(bunniesFilePath); fileStream.Close();
         }
     }
 
-
-
     [Serializable]
     public class Bunny
     {
         public int Age { get; set; }
+
         public string Name { get; set; }
+
         public FurType FurType { get; set; }
+
         public void Introduce(IWriter writer)
         {
             writer.WriteLine($"{this.Name} - I am {this.Age} years old!");
             writer.WriteLine($"{this.Name} - And I am {this.FurType.ToString().SplitToSeparateWordsByUppercaseLetter()}");
         }
+
         public override string ToString()
         {
             var builderSize = 200;
@@ -92,28 +78,19 @@ File.Create(bunniesFilePath); fileStream.Close();
         }
     }
 
-    public enum FurType
-    {
-        NotFluffy, ALittleFluffy, Fluffy, FluffyToTheLimit
-    }
-
-    public
-        interface
-            IWriter
+    public interface IWriter
     {
         void Write(string message);
         void WriteLine(string message);
     }
 
-    public
-        class
-            ConsoleWriter :
-            IWriter
+    public class ConsoleWriter : IWriter
     {
         public void Write(string message)
         {
             Console.Write(message);
         }
+
         public void WriteLine(string message)
         {
             Console.WriteLine(message);
