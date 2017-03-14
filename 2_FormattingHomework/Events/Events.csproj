@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PowerCollections">
+      <HintPath>..\..\..\..\..\Downloads\PowerCollections\PowerCollections\Binaries\PowerCollections.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,13 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IReader.cs" />
-    <Compile Include="Events.cs" />
+    <Compile Include="Core\Engine.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\Messages.cs" />
+    <Compile Include="StartUp.cs" />
     <Compile Include="Models\ConsoleReader.cs" />
+    <Compile Include="Models\EventHolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
