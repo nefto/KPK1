@@ -6,7 +6,7 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    public class Event
+    public class Event:IComparable
     {
         private DateTime date;
         private string title;

@@ -2,9 +2,9 @@
 {
     using System;
     using Contracts;
-    using Events.Models;
+    using Models;
 
-    public class Engine
+    public static class Engine
     {
         public static EventHolder Events = new EventHolder();
 
