@@ -5,6 +5,15 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1Class123", "Task1Class123\Task1Class123.csproj", "{8F3CF0FE-D991-42D5-A093-F5E8D56494B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2MakeChuek", "Task2MakeChuek\Task2MakeChuek.csproj", "{01948321-1A62-4CFF-881D-8B02EF1052A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Javascript", "Javascript", "{CA4AEC14-774F-42A8-A8E6-5A0B60FE5F1C}"
+	ProjectSection(SolutionItems) = preProject
+		button-on-click.js = button-on-click.js
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper", "..\..\..\..\..\..\Telerik Cources\KPK I\High-Quality-Code-Part-1\Topics\03. Naming-Identifiers\homework\MineSweeper.csproj", "{B20E8DFD-5F12-4358-849D-1F25806E9052}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +24,14 @@ Global
 		{8F3CF0FE-D991-42D5-A093-F5E8D56494B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F3CF0FE-D991-42D5-A093-F5E8D56494B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F3CF0FE-D991-42D5-A093-F5E8D56494B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01948321-1A62-4CFF-881D-8B02EF1052A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01948321-1A62-4CFF-881D-8B02EF1052A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01948321-1A62-4CFF-881D-8B02EF1052A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01948321-1A62-4CFF-881D-8B02EF1052A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B20E8DFD-5F12-4358-849D-1F25806E9052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B20E8DFD-5F12-4358-849D-1F25806E9052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B20E8DFD-5F12-4358-849D-1F25806E9052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B20E8DFD-5F12-4358-849D-1F25806E9052}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
